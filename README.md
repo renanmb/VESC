@@ -1,3 +1,5 @@
+originally from: https://github.com/mrsd16teamd/loco_car/wiki/VESC
+
 How to get VESC working with ROS
 
 ROS drivers for the VESC are provided by the MIT RACECAR team.
