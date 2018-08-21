@@ -33,20 +33,34 @@ Now, do a rostopic list and you will be able to see several topics be published/
 Do a rostopic echo /sensors/core to view certain sensor information like:
 
 state:
+
 voltage_input: 12.0
+
 temperature_pcb: 28.7
+
 current_motor: -0.06
+
 current_input: 0.0
+
 speed: -193.0
+
 duty_cycle: -0.014
+
 charge_drawn: 18.0
+
 charge_regen: 0.0
+
 energy_drawn: 223.0
+
 energy_regen: 2.0
+
 displacement: -2077.0
+
 distance_traveled: 16301.0
+
 fault_code: 0
-Next, we can publish on the /commands/motor/speed topic to execute RPM commands. From the CLI, you can do:
+
+ext, we can publish on the /commands/motor/speed topic to execute RPM commands. From the CLI, you can do:
 
 rostopic pub -r 20 /commands/motor/speed -- std_msgs/Float64 -200
 
@@ -67,12 +81,13 @@ Getting odometry from the VESC
 roslaunch vesc_ackermann vesc_to_odom_node.launch
 
 Launch will fail, as we need to specify 5 rosparams:
-
-speed_to_erpm_gain
-speed_to_erpm_offset
-steering_angle_to_servo_gain
-steering_angle_to_servo_offset
-wheelbase
+<ul>
+  <li>speed_to_erpm_gain</li>
+  <li>speed_to_erpm_offset</li>
+  <li>steering_angle_to_servo_gain</li>
+  <li>steering_angle_to_servo_offset</li>
+  <li>wheelbase</li>
+</ul>
 These can be set manually via CLI by running:
 rosparam set speed_to_erpm_gain -1664
 
