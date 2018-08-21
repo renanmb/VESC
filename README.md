@@ -93,7 +93,7 @@ rosparam set speed_to_erpm_gain -1664
 
 erpm gain of -1664 is what the VESC + MST is currently tuned for. offset should be 0, may go back to investigate whether we can use this to account for steady-state error
 
-TODO: set the rosparams from the .launch file, using a .xml list
+<b>TODO:</b> set the rosparams from the .launch file, using a .xml list
 
 once these params are set, the node should launch properly. The node publishes on the /odom_vesc topic a nav_msgs/Odometry message.
 
