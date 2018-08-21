@@ -33,33 +33,33 @@ Now, do a rostopic list and you will be able to see several topics be published/
 Do a rostopic echo /sensors/core to view certain sensor information like:
 
 state:
+<ul>
+<li>voltage_input: 12.0</li>
 
-voltage_input: 12.0
+<li>temperature_pcb: 28.7</li>
 
-temperature_pcb: 28.7
+<li>current_motor: -0.06</li>
 
-current_motor: -0.06
+<li>current_input: 0.0</li>
 
-current_input: 0.0
+<li>speed: -193.0</li>
 
-speed: -193.0
+<li>duty_cycle: -0.014</li>
 
-duty_cycle: -0.014
+<li>charge_drawn: 18.0</li>
 
-charge_drawn: 18.0
+<li>charge_regen: 0.0</li>
 
-charge_regen: 0.0
+<li>energy_drawn: 223.0</li>
 
-energy_drawn: 223.0
+<li>energy_regen: 2.0</li>
 
-energy_regen: 2.0
+<li>displacement: -2077.0</li>
 
-displacement: -2077.0
+<li>distance_traveled: 16301.0</li>
 
-distance_traveled: 16301.0
-
-fault_code: 0
-
+<li>fault_code: 0</li>
+</ul>
 ext, we can publish on the /commands/motor/speed topic to execute RPM commands. From the CLI, you can do:
 
 rostopic pub -r 20 /commands/motor/speed -- std_msgs/Float64 -200
