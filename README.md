@@ -1,8 +1,9 @@
+# How to get VESC working with ROS
+
 originally from: https://github.com/mrsd16teamd/loco_car/wiki/VESC
 
-How to get VESC working with ROS
 
-ROS drivers for the VESC are provided by the MIT RACECAR team.
+ROS drivers for the VESC are provided by the MIT RACECAR team:
 
 https://github.com/mit-racecar/vesc
 
@@ -19,15 +20,16 @@ Be sure to check the default port in the launch file: roscd vesc_driver/launch
 Edit the vesc_driver_node.launch file. Once done, do roslaunch vesc_driver vesc_driver_node.launch
 
 Now, do a rostopic list and you will be able to see several topics be published/listened on
-
-/commands/motor/brake
-/commands/motor/current
-/commands/motor/duty_cycle
-/commands/motor/position
-/commands/motor/speed
-/commands/servo/position
-/sensors/core
-/sensors/servo_position_command
+<ul>
+  <li>/commands/motor/brake</li>
+  <li>/commands/motor/current</li>
+  <li>/commands/motor/duty_cycle</li>
+  <li>/commands/motor/position</li>
+  <li>/commands/motor/speed</li>
+  <li>/commands/servo/position</li>
+  <li>/sensors/core</li>
+  <li>/sensors/servo_position_command</li>
+</ul>  
 Do a rostopic echo /sensors/core to view certain sensor information like:
 
 state:
